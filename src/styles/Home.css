@@ -1,0 +1,223 @@
+/* ==========================================================================
+   HOME PAGE SPECIFIC STYLES
+   ========================================================================== */
+
+/* Hero Banner */
+.home-hero {
+    background-color: var(--cream);
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+.home-hero .container {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.home-hero-content {
+    padding: 20px 0;
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.home-hero-title {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 20px;
+    color: var(--black);
+}
+
+.home-hero-text {
+    font-size: 19px;
+    line-height: 1.6;
+    color: var(--gray-text);
+    margin-bottom: 35px;
+}
+
+.home-hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+/* We will generate or use a premium SVG / styling for a mockup coffee cup in the hero image since no physical image was provided in root */
+.home-hero-image-placeholder {
+    width: 100%;
+    max-width: 420px;
+    height: 350px;
+    background: linear-gradient(135deg, var(--green-primary), var(--green-dark));
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    box-shadow: 0 15px 35px rgba(0, 112, 74, 0.25);
+    text-align: center;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.home-hero-image-placeholder::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
+    animation: rotateBg 20s linear infinite;
+}
+
+@keyframes rotateBg {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Alternating Promos */
+.home-promo-section {
+    padding: 60px 0;
+    background-color: var(--white);
+    border-bottom: 12px solid var(--white); /* White spacers between cards */
+}
+
+.home-promo-section .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    align-items: stretch;
+    padding: 0;
+    border-radius: 0;
+    overflow: hidden;
+}
+
+.home-promo-green {
+    background-color: var(--green-dark);
+    color: var(--white);
+}
+
+.home-promo-green .home-promo-title {
+    color: var(--white);
+}
+
+.home-promo-green .home-promo-description {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.home-promo-orange {
+    background-color: #f06464;
+    color: var(--white);
+}
+
+.home-promo-orange .home-promo-title {
+    color: var(--white);
+}
+
+.home-promo-orange .home-promo-description {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.home-promo-section:nth-child(even) .home-promo-image-box {
+    order: 2;
+}
+
+.home-promo-section:nth-child(even) .home-promo-text-box {
+    order: 1;
+}
+
+.home-promo-image-box {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    min-height: 360px;
+}
+
+.home-promo-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.home-promo-section:hover .home-promo-image-box img {
+    transform: scale(1.03);
+}
+
+.home-promo-text-box {
+    padding: 60px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.home-promo-title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 20px;
+    color: var(--black);
+    letter-spacing: -0.02em;
+}
+
+.home-promo-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--gray-text);
+    margin-bottom: 25px;
+    max-width: 440px;
+}
+
+/* ==========================================================================
+   RESPONSIVE OVERRIDES
+   ========================================================================== */
+@media (max-width: 768px) {
+    .home-hero .container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .home-hero-content {
+        text-align: center;
+    }
+    
+    .home-hero-title {
+        font-size: 36px;
+    }
+
+    .home-hero-text {
+        font-size: 17px;
+    }
+
+    .home-promo-section .container {
+        grid-template-columns: 1fr;
+    }
+
+    .home-promo-section:nth-child(even) .home-promo-image-box {
+        order: 1;
+    }
+
+    .home-promo-section:nth-child(even) .home-promo-text-box {
+        order: 2;
+    }
+
+    .home-promo-image-box {
+        min-height: 280px;
+    }
+
+    .home-promo-text-box {
+        padding: 40px 20px;
+    }
+
+    .home-promo-title {
+        font-size: 26px;
+    }
+}

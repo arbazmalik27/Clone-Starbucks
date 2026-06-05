@@ -1,0 +1,213 @@
+/* ==========================================================================
+   SIGNUP PAGE SPECIFIC STYLES
+   ========================================================================= */
+
+.signup-page {
+    background-color: var(--gray-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 72px - 260px); /* Fill space between nav and footer */
+    padding: 50px 20px;
+}
+
+.signup-container {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 460px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+    animation: fadeInUp 0.4s ease forwards;
+}
+
+.signup-title {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: var(--black);
+}
+
+.signup-rewards-label {
+    text-align: center;
+    font-size: 11px;
+    color: var(--gray-text);
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    margin-bottom: 15px;
+}
+
+.signup-description {
+    text-align: center;
+    font-size: 13px;
+    color: var(--gray-text);
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.signup-required-note {
+    font-size: 11px;
+    color: var(--gray-text);
+    margin-bottom: 20px;
+}
+
+.signup-section-title {
+    font-weight: 700;
+    margin-top: 25px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    border-bottom: 1px solid var(--gray-border);
+    padding-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--green-dark);
+}
+
+.signup-form-group {
+    margin-bottom: 18px;
+    position: relative;
+}
+
+.signup-form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.signup-input {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 6px;
+    border: 1px solid var(--gray-border);
+    font-size: 14px;
+    outline: none;
+    transition: var(--transition);
+    background-color: var(--white);
+}
+
+.signup-input:focus {
+    border-color: var(--green-primary);
+    box-shadow: 0 0 0 3px rgba(0, 112, 74, 0.15);
+}
+
+.signup-input.input-error {
+    border-color: #dc2626;
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+.signup-error-text {
+    color: #dc2626;
+    font-size: 11px;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Password Toggle Eye styling */
+.password-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-input-wrapper input {
+    padding-right: 45px;
+}
+
+.password-toggle-btn {
+    position: absolute;
+    right: 14px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--gray-text);
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.password-requirements {
+    font-size: 11px;
+    color: var(--gray-text);
+    margin-top: 6px;
+    line-height: 1.4;
+}
+
+/* Checkboxes */
+.checkbox-group {
+    display: flex;
+    gap: 12px;
+    margin: 20px 0;
+    font-size: 13px;
+    align-items: flex-start;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-top: 4px;
+    width: 16px;
+    height: 16px;
+    accent-color: var(--green-primary);
+}
+
+.checkbox-group label {
+    line-height: 1.4;
+    cursor: pointer;
+}
+
+.signup-link {
+    color: var(--black);
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.signup-link:hover {
+    color: var(--green-primary);
+}
+
+.signup-submit-btn {
+    background-color: var(--black);
+    color: var(--white);
+    border: none;
+    padding: 12px 24px;
+    width: auto;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    float: right;
+    margin-top: 15px;
+    transition: var(--transition);
+}
+
+.signup-submit-btn:hover {
+    background-color: var(--green-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 112, 74, 0.2);
+}
+
+.signup-success-card {
+    text-align: center;
+    padding: 30px 10px;
+}
+
+.signup-success-card i {
+    font-size: 56px;
+    color: var(--green-primary);
+    margin-bottom: 20px;
+}
+
+.signup-success-card h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.signup-success-card p {
+    font-size: 14px;
+    color: var(--gray-text);
+    margin-bottom: 25px;
+}
